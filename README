@@ -1,0 +1,38 @@
+libnotifyperl for TTYtter 1.0
+by Colin Dean (@colindean)
+
+ABOUT
+
+This is a TTYtter extension which uses Gtk2::Notify to send notifications to Notify-OSD on compatible desktop platforms. It's obviously primarily meant for Ubuntu users.
+
+COMPATIBILITY
+
+This extension has been tested with every version of TTYtter 1.1.x up to 1.1.3 on Ubuntu 10.04. I'll generally keep up with new releases, as I do eat my own dogfood.
+
+LICENSE
+
+Because libnotifyperl for TTYtter is hopelessly bound to TTYtter, it's bound by the Floodgap Free Software License.
+
+http://www.floodgap.com/software/ffsl/ or see COPYING.
+
+INSTALLATION
+
+Make sure that libgtk2-notify-perl is installed with:
+
+	sudo apt-get install libgtk2-notify-perl
+
+Then, put libnotifyperl.pl somewhere safe and tell TTYtter you want it to load the extension with:
+
+	--exts=${path_to_file}/libnotifyperl.pl --notifytype=libnotifyperl
+
+I want notifications on DMs and mentions, so I also add this to my .ttytterrc/command line:
+	
+	--notifies=dm,reply
+
+Note that it's best to just drop these on separate lines in your .ttytterrc in your home directory.
+
+REFERENCES
+
+TTYtter (@ttytter) by Cameron Kaiser (@doctorlinguist): http://www.floodgap.com/software/ttytter/
+
+
