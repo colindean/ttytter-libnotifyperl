@@ -1,5 +1,6 @@
 libnotifyperl for TTYtter 1.0
 by Colin Dean (@colindean)
+http://cad.cx
 
 ABOUT
 
@@ -16,6 +17,10 @@ Because libnotifyperl for TTYtter is hopelessly bound to TTYtter, it's bound by 
 http://www.floodgap.com/software/ffsl/ or see COPYING.
 
 INSTALLATION
+
+Ensure that you have the latest version by downloading it from the repository:
+
+	http://github.com/colindean/ttytter-libnotifyperl
 
 Make sure that libgtk2-notify-perl is installed with:
 
@@ -34,5 +39,3 @@ Note that it's best to just drop these on separate lines in your .ttytterrc in y
 REFERENCES
 
 TTYtter (@ttytter) by Cameron Kaiser (@doctorlinguist): http://www.floodgap.com/software/ttytter/
-
-
