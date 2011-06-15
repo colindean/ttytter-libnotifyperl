@@ -1,4 +1,8 @@
-eval('use Gtk2::Notify') || print "Gtk2::Notify is not installed. Please install it with \'cpan Gtk2::Notify\' or \'sudo apt-get install libgtk2-notify-perl\' or whatever is appropriate for your system.\n";
+eval { require Gtk2::Notify }; 
+if($@){
+	print "Gtk2::Notify is not installed. Please install it with \'cpan Gtk2::Notify\' or \'sudo apt-get install libgtk2-notify-perl\' or whatever is appropriate for your system.\n";
+	die();
+}
 
 sub notifier_libnotifyperl {
   my $class = shift;
