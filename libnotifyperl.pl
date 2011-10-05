@@ -4,7 +4,8 @@ if($@){
 	die();
 }
 
-sub notifier_libnotifyperl {
+sub notifier_libnotifyperl { 
+  return 1 if(!$ENV{'DISPLAY'});
   my $class = shift;
   my $text = shift;
   my $ref = shift; # not used in this version
@@ -19,11 +20,11 @@ sub notifier_libnotifyperl {
     }
   }
 
-	my $notification = Gtk2::Notify->new(
+  my $notification = Gtk2::Notify->new(
     "TTYtter: $class",
     $text
   );
-	$notification->show;
+  $notification->show;
   return 1;
 }
 1;
