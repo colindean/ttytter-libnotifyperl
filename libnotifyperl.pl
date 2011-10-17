@@ -17,6 +17,7 @@ sub notifier_libnotifyperl {
       $class = 'libnotify-perl support activated';
       $text =
 'Congratulations, Gtk2::Notify is correctly configured for TTYtter.';
+      Gtk2::Notify->init('ttytter');
     }
   }
 
