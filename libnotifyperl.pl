@@ -18,14 +18,21 @@ sub notifier_libnotifyperl {
       $text =
 'Congratulations, Gtk2::Notify is correctly configured for TTYtter.';
       Gtk2::Notify->init('ttytter');
+      print $text;
     }
   }
 
-  my $notification = Gtk2::Notify->new(
-    "TTYtter: $class",
-    $text
-  );
-  $notification->show;
+  if ( Gtk2::Notify->is_initted() ){
+    my $notification = Gtk2::Notify->new(
+      "TTYtter: $class",
+      $text
+    );
+    #$notification->set_timeout(1_000); #unnecessary, default is fine
+    if($notification->show()){
+      #this is debug code more or less
+      print "Showed a $class";
+    }
+  }
   return 1;
 }
 1;
