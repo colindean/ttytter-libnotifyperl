@@ -11,6 +11,10 @@ This is a TTYtter extension which uses Gtk2::Notify to send notifications to Not
 
 This extension has been tested with every version of TTYtter 1.1.x up to 1.1.12 on Ubuntu 11.04. I'll generally keep up with new releases, as I do eat my own dogfood. I do sometimes lag behind a little, as Ubuntu is no longer my primary workstation OS.
 
+Note that this plugin has not been tested beyond Ubuntu 11.04. Please check the issues section of the Github repository for updates. Pull requests are welcome and encouraged, as I no longer actively use TTYtter.
+
+        https://github.com/colindean/ttytter-libnotifyperl/issues
+
 ### LICENSE ###
 
 Because libnotifyperl for TTYtter is hopelessly bound to TTYtter, it's bound by the Floodgap Free Software License.
